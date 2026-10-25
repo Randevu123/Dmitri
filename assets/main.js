@@ -224,7 +224,7 @@
   }
 
   /* ---------- reveal ---------- */
-  const revealTargets = $$(".sec__head, .ident > *, .look > *, .persona__keys, .card, .lhs__col, .stats > *, .skill, .panic > *, .hotfix > *, .trait, .inv__item, .oath__label");
+  const revealTargets = $$(".sec__head, .ident > *, .look > *, .persona__keys, .hp, .card, .lhs__col, .stats > *, .skill, .panic > *, .hotfix > *, .trait, .inv__item, .link > *, .oath__label");
   revealTargets.forEach(el => el.classList.add("rv"));
   const io = new IntersectionObserver(entries => {
     entries.forEach(e => {

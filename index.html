@@ -18,6 +18,36 @@
 </head>
 <body>
 
+<!-- ============ PHOTOSENSITIVITY + AUDIO WARNING ============ -->
+<div class="gate" id="gate" role="dialog" aria-modal="true" aria-labelledby="gateTitle" aria-describedby="gateText gateSoundText">
+  <div class="gate__box">
+    <p class="gate__kicker mono"><span class="gate__tag">[WARN]</span> photosensitivity &amp; audio</p>
+    <h2 class="gate__title" id="gateTitle">광과민성 발작 주의</h2>
+    <p class="gate__text" id="gateText">이 페이지에는 깜빡이는 빛, 색이 반전되며 화면이 흔들리는 효과(특수능력 섹션의 KERNEL PANIC 버튼), 글리치와 노이즈처럼 빠르게 움직이는 그래픽이 포함되어 있습니다. 광과민성 뇌전증이 있거나 빛과 움직임에 민감하다면 주의해 주세요. 보는 도중 어지럽거나 불편하면 바로 창을 닫아 주세요.</p>
+    <div class="gate__sound">
+      <p class="gate__sub mono">&gt; audio_output: enabled</p>
+      <p class="gate__text" id="gateSoundText">이 페이지에는 배경 음악이 나옵니다. 들어가기 전에 기기의 소리를 줄여 주세요. 소리 없이 보고 싶다면 &lsquo;소리 끄고 보기&rsquo;를 누르세요. 들어간 뒤에도 오른쪽 위 SOUND 버튼으로 언제든 켜고 끌 수 있습니다.</p>
+    </div>
+    <div class="gate__timer mono" aria-live="polite">
+      <div class="gate__bar"><span id="gateBar"></span></div>
+      <span id="gateStatus">경고 확인 중 &hellip; 3</span>
+    </div>
+    <div class="gate__actions" id="gateActions">
+      <button class="gate__btn gate__btn--primary" id="gateEnter" type="button" disabled>소리 켜고 보기</button>
+      <button class="gate__btn" id="gateMute" type="button" disabled>소리 끄고 보기</button>
+      <button class="gate__btn gate__btn--ghost" id="gateDecline" type="button">웹사이트 보지 않기</button>
+    </div>
+    <div class="gate__alt" id="gateAlt" hidden>
+      <p class="gate__text">웹사이트 대신 같은 내용을 문서로 볼 수 있습니다.</p>
+      <a class="gate__btn gate__btn--primary" id="gateDoc" href="https://docs.google.com/document/d/1mQiWOn0bs2Uu2od8ZSqLZsz_IyLvNOOZQxRkrFOKN-I/edit?usp=sharing" target="_blank" rel="noopener">구글 독스로 본문 보기 &#8599;</a>
+      <button class="gate__back mono" id="gateBack" type="button">&larr; 경고로 돌아가기</button>
+    </div>
+  </div>
+</div>
+
+<!-- 배경 음악: assets/bgm.mp3 파일을 넣으면 재생된다 (파일 이름을 바꾸려면 src만 고치면 됨) -->
+<audio id="bgm" src="assets/bgm.mp3" loop preload="auto"></audio>
+
 <!-- ============ BOOT LOADER ============ -->
 <div class="boot" id="boot" aria-hidden="true">
   <pre class="boot__log" id="bootLog"></pre>
@@ -34,7 +64,9 @@
   <nav class="nav__index" aria-label="섹션">
     <a href="#s01">01</a><a href="#s02">02</a><a href="#s03">03</a><a href="#s04">04</a><a href="#s05">05</a><a href="#s06">06</a><a href="#s07">07</a><a href="#s08">08</a><a href="#s09">09</a><a href="#s10">10</a>
   </nav>
-  <div class="nav__meta"><span class="dot"></span><span id="clock">00:00:00</span> CONCORDIA</div>
+  <div class="nav__meta"><span class="dot"></span><span id="clock">00:00:00</span><span class="nav__loc">CONCORDIA</span>
+    <button class="nav__sound" id="soundBtn" type="button" aria-pressed="false" aria-label="배경 음악 켜기/끄기"><span class="eq" aria-hidden="true"><i></i><i></i><i></i></span><span id="soundLabel">SOUND OFF</span></button>
+  </div>
 </header>
 
 <div class="progress" aria-hidden="true"><span id="progress"></span></div>

@@ -501,7 +501,7 @@ body.is-crash main{animation:crash-shift .9s steps(1)}
   .nav__loc{display:none}
   .nav__sound{margin-left:4px}
   .gate__actions .gate__btn:not(.gate__btn--ghost){flex:1 1 100%}
-  .bars li{grid-template-columns:32px 56px 1fr 32px;gap:10px}
+  .bars li{grid-template-columns:32px 72px 1fr 32px;gap:10px}
   .skill p{padding-left:0}
   .end__link{grid-template-columns:minmax(0,1fr)}
   .end__arrow{display:none}

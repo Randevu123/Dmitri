@@ -62,7 +62,7 @@
 <header class="nav">
   <a class="nav__brand glitch-hover" href="#top" data-text="GHD/SAPIENTIA">GHD/SAPIENTIA</a>
   <nav class="nav__index" aria-label="섹션">
-    <a href="#s01">01</a><a href="#s02">02</a><a href="#s03">03</a><a href="#s04">04</a><a href="#s05">05</a><a href="#s06">06</a><a href="#s07">07</a><a href="#s08">08</a><a href="#s09">09</a><a href="#s10">10</a>
+    <a href="#s01">01</a><a href="#s02">02</a><a href="#s03">03</a><a href="#s04">04</a><a href="#s05">05</a><a href="#s06">06</a><a href="#s07">07</a><a href="#s08">08</a><a href="#s09">09</a><a href="#s10">10</a><a href="#s11">11</a>
   </nav>
   <div class="nav__meta"><span class="dot"></span><span id="clock">00:00:00</span><span class="nav__loc">CONCORDIA</span>
     <button class="nav__sound" id="soundBtn" type="button" aria-pressed="false" aria-label="배경 음악 켜기/끄기"><span class="eq" aria-hidden="true"><i></i><i></i><i></i></span><span id="soundLabel">SOUND OFF</span></button>
@@ -242,6 +242,16 @@
     <h2 class="sec__title scramble">능력치</h2>
   </header>
 
+  <div class="hp" role="img" aria-label="총체력 290: 기본 체력 200, 추가 체력 90">
+    <div class="hp__head">
+      <p class="mono hp__idx">5.0 &mdash; Total HP</p>
+      <p class="hp__name">총체력</p>
+      <p class="hp__num">290</p>
+    </div>
+    <div class="hp__bar" aria-hidden="true"><i class="hp__base"></i><i class="hp__bonus"></i></div>
+    <p class="mono hp__legend"><span><i class="hp__dot hp__dot--base"></i>기본 체력 200</span><span>+</span><span><i class="hp__dot hp__dot--bonus"></i>추가 체력 90</span></p>
+  </div>
+
   <div class="stats">
     <svg class="radar" viewBox="-130 -130 260 260" role="img" aria-label="능력치 육각 그래프: 추가 체력 90, 공격력 10, 방어력 90, 민첩성 50, 정확성 10, 정신력 70">
       <g class="radar__grid"></g>
@@ -258,7 +268,7 @@
       <li data-v="70"><span>5.6</span><span>정신력</span><span class="bar"><i></i></span><b>70</b></li>
     </ul>
   </div>
-  <p class="mono stats__note">// total 320 &middot; build: TANK / SUPPORT &middot; low ATK, low ACC by design</p>
+  <p class="mono stats__note">// total HP 290 = base 200 + bonus 90 &middot; allocated 320 &middot; build: TANK / SUPPORT &middot; low ATK, low ACC by design</p>
 </section>
 
 <!-- ============ 06 SKILLS ============ -->
@@ -295,7 +305,7 @@
         <span class="mono skill__no">6.3</span>
         <span class="skill__type mono">ATK</span>
         <span class="skill__name">버퍼 오버플로우</span>
-        <span class="skill__tags mono"><em>공격/에너지</em><em>#연</em></span>
+        <span class="skill__tags mono"><em>공격/에너지</em><em>#연격</em></span>
         <span class="skill__toggle" aria-hidden="true"></span>
       </summary>
       <p>휴대 단말의 잉여 연산 데이터를 불안정한 파편 형태로 뭉쳐 전방으로 비산시킨다. 정확도는 떨어지지만 다량의 네온빛 데이터 파편이 산탄처럼 퍼져 적의 접근을 차단하고 찰과상을 입힌다.</p>
@@ -305,7 +315,7 @@
         <span class="mono skill__no">6.4</span>
         <span class="skill__type mono">ATK</span>
         <span class="skill__name">강제 종료 신호(SIGKILL)</span>
-        <span class="skill__tags mono"><em>공격/특수</em><em>#회</em></span>
+        <span class="skill__tags mono"><em>공격/특수</em><em>#회복</em></span>
         <span class="skill__toggle" aria-hidden="true"></span>
       </summary>
       <p>가상현실 장갑의 전도성 패널에 순간적으로 고전압 펄스를 모아 근접한 적의 급소나 무구에 직접 꽂아 넣는다. 공격력 수치가 낮아 치명상을 입히지는 못하나, 강한 감전 경련을 유발해 적의 행동을 순간적으로 끊어낸다.</p>
@@ -421,8 +431,8 @@
 <section class="sec" id="s10">
   <header class="sec__head">
     <span class="sec__num">10</span>
-    <span class="sec__paren">(Inventory &amp; Link)</span>
-    <h2 class="sec__title scramble">소지품 &middot; 선관</h2>
+    <span class="sec__paren">(Inventory)</span>
+    <h2 class="sec__title scramble">소지품</h2>
   </header>
 
   <div class="inv">
@@ -436,10 +446,28 @@
       <p class="inv__name">핫픽스 큐브</p>
       <p class="mono dim pink">ERROR_CUBE // neon pink</p>
     </div>
-    <div class="inv__item">
-      <p class="mono card__idx">10.3 &mdash; 선관</p>
-      <p class="inv__name">쿠드랴프카 세베랴노비치 이바노프</p>
-      <p class="mono dim">지향 커플링 : &minus;</p>
+  </div>
+</section>
+
+<!-- ============ 11 LINK ============ -->
+<section class="sec" id="s11">
+  <header class="sec__head">
+    <span class="sec__num">11</span>
+    <span class="sec__paren">(Link)</span>
+    <h2 class="sec__title scramble">선관</h2>
+  </header>
+
+  <div class="link">
+    <div class="link__who">
+      <p class="mono card__idx">11.1 &mdash; Linked subject</p>
+      <p class="link__name">쿠드랴프카 세베랴노비치 이바노프</p>
+      <dl class="link__meta mono">
+        <div><dt>11.2 &mdash; 지향 커플링</dt><dd>&minus;</dd></div>
+      </dl>
+    </div>
+    <div class="link__body">
+      <p class="mono card__idx">11.3 &mdash; Relation log</p>
+      <p class="link__desc">범죄자의 누명을 쓸 뻔한 녀석의 전산 기록을 손질해 빼내 주며 알게 되었다. 규정 타령이나 하는 고지식함이 기가 차면서도, 그 원칙주의와 공간 도약 능력이 흥미로워 종종 커피를 들고 찾아간다. 매번 깐족대며 장난을 치지만, 동생을 지키려는 녀석의 우직한 책임감은 확실히 신뢰한다.</p>
     </div>
   </div>
 </section>
@@ -448,6 +476,7 @@
 <section class="oath" aria-label="입단 각오">
   <p class="mono oath__label">(Oath) &mdash; 입단 각오</p>
   <p class="oath__text" id="oath">[ 방치하면 무너질 게 뻔한 시스템을 그냥 보고만 있는 건 제 성미에 안 맞아서요. 질서 수호 같은 거창한 명분은 됐고, 인과관계가 맞는 일에만 제 연산 능력을 빌려드리겠습니다. 대신 리셋 타임 5분 동안 저 버려두고 도망가지나 마시죠. 그 규칙만 지켜주시면 제 큐브는 언제든 최우선으로 깔아드립니다. ]</p>
+  <p class="oath__owner"><span class="mono">(Owner) &mdash; 랑데부</span>잘 부탁 드립니다.</p>
 </section>
 
 <!-- ============ FOOTER / DOC LINK ============ -->
